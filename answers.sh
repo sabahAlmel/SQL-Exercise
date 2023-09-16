@@ -33,3 +33,17 @@ where c.Name=e.Company and c.date <2000
 select c.Name
 from employees e,companies c
 where e.Company=c.Name and e.Role="Graphic Designer"
+
+#### Count and Filter
+select Name, max(Points) as highest from students;
+
+select avg(Points) as Average from students;
+
+select count(Name) as NumberOfStudent 
+from students where Points=500;
+
+select Name from students
+where Name like'%s%';
+
+select * from students 
+order by Points DESC
